@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {//2 parameters {# of steps, # of threads}
       step = 1.0/(num_steps);
 
       omp_set_dynamic(0);
-      //omp_set_num_threads( stoi( argv[2] ));
+      omp_set_num_threads( 5 ); // stoi( argv[2] ));
       
 
       double tb = omp_get_wtime();
