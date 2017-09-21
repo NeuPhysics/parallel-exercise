@@ -7,7 +7,7 @@ using namespace std;
 
 int main(int argc, char *argv[]) {//2 parameters {# of steps, # of threads}
 
-      static long num_steps = stoi(argv[1]);
+      static long long num_steps = stoll(argv[1]);
       double step;
 
       double x, pi, sum = 0.0;
@@ -33,7 +33,6 @@ int main(int argc, char *argv[]) {//2 parameters {# of steps, # of threads}
 
       pi = step * sum;
 
-      cout << pi << endl;
+      cout << argv[1] << ", " << argv[2]<< ", " << te-tb << ", " << pi << endl;
 
-      cout << te-tb << endl;
 }
