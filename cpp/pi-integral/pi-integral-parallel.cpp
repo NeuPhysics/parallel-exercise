@@ -8,13 +8,14 @@ using namespace std;
 int main(int argc, char *argv[]) {//2 parameters {# of steps, # of threads}
 
       static long long num_steps = stoll(argv[1]);
+ //     cout << num_steps << endl;
       double step;
 
       double x, pi, sum = 0.0;
       step = 1.0/(num_steps);
 
       omp_set_dynamic(0);
-      omp_set_num_threads(stoi( argv[2] ));
+      //omp_set_num_threads( stoi( argv[2] ));
       
 
       double tb = omp_get_wtime();
@@ -26,6 +27,7 @@ int main(int argc, char *argv[]) {//2 parameters {# of steps, # of threads}
                   x = (i+0.5) * step;
                   sum += 4.0/(1.0+x*x);
             }
+//            cout << omp_get_num_threads() << endl;
       }
 
 
