@@ -9,6 +9,7 @@ using namespace std;
 int main(int argc, char *argv[]) {//2 parameters {# of steps, # of threads}
 
       const long num_steps =  1e9; //stoll(argv[1]);
+      // const long num_steps = stoll(argv[1]);
  //     cout << num_steps << endl;
 
 
